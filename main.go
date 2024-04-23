@@ -36,9 +36,9 @@ func main() {
 
 	fmt.Println("=====STARTING SERVER=====")
 
-	//http.HandleFunc("/bramble", (func(writer http.ResponseWriter, _ *http.Request) {
-	//	fmt.Fprintf(writer, "<html><body><h1>I HAVE BEEN UPDATED!!!</h1></body></html>")
-	//}))
+	http.HandleFunc("/bramble", (func(writer http.ResponseWriter, _ *http.Request) {
+		fmt.Fprintf(writer, "<html><body><h1>I HAVE BEEN UPDATED!!!</h1></body></html>")
+	}))
 
 	err := http.ListenAndServe(fmt.Sprintf(":%v", port), nil)
 	if err != nil {
